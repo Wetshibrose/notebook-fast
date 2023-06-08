@@ -7,12 +7,10 @@ from .schema import Note
 app = FastAPI()
 
 
-@app.get("/")
-def root():
-    data = {
-        "message": "hello world",
-    }
-    return data
+@app.get("/", status_code=status.HTTP_200_OK)
+def get_notes():
+    all_notes: list[Note] = notes
+    return {"notes": all_notes}
 
 
 @app.get("/notes", status_code=status.HTTP_200_OK)
