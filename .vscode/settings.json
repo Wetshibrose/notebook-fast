@@ -5,6 +5,10 @@
     "python.formatting.provider": "none",
     "cSpell.words": [
         "fastapi",
-        "pydantic"
+        "occured",
+        "pgcrypto",
+        "psycopg",
+        "pydantic",
+        "TIMESTAMPTZ"
     ]
 }
