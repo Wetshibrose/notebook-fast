@@ -13,6 +13,7 @@ class Author(BaseModel):
 
 class Note(BaseModel):
     id: uuid.UUID = Field(default_factory=uuid.uuid4)
+    title: str = Field(default="Default Head")
     text: str
     author: Author
     created_at: datetime = Field(default_factory=datetime.utcnow)
